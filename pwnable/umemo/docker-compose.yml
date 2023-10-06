@@ -1,0 +1,20 @@
+version: '3'
+services:
+  challenge:
+    build:
+      context: .
+      dockerfile: ./build/Dockerfile
+      args:
+        FLAG1: "SECCON{k3rn3l_bug5_5p1ll_0v3r_1n70_u53r_pr0gr4m5}"
+        FLAG2: "SECCON{d0n7_f0rg37_70_1ncr3m3n7_r3fc0un7}"
+        FLAG3: "SECCON{q3mu_15_4_k1nd_0f_54ndb0x.....r1gh7?}"
+    working_dir: /home/pwn
+    container_name: ukqmemo
+    ulimits:
+      nproc: 65535
+      core: 0
+    ports:
+      - "6318:9999"
+    entrypoint: /etc/init.sh
+    init: true
+    restart: always

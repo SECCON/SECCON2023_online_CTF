@@ -1,0 +1,1 @@
+FLAG = b"SECCON{I_te4ch_y0u_secret_spell...---number_XIV---Temperance!!!}"
